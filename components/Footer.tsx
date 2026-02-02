@@ -112,6 +112,18 @@ export function Footer() {
           <p className="text-orb-grey text-sm">
             Built specifically for golf courses.
           </p>
+          <p className="text-orb-grey text-sm">
+            by{" "}
+            <a
+              href="https://defiantintegration.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-orb-grey hover:text-cyan-accent transition-colors"
+            >
+              Defiant Integration
+            </a>
+            .
+          </p>
         </div>
       </div>
     </footer>
