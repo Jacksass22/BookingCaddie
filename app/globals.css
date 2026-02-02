@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0A0A0F;
+  --foreground: #e2e8f0;
+  --navy: #273142;
+  --charcoal: #3A4A5C;
+  --defiant-blue: #0072CE;
+  --electric-blue: #3B82F6;
+  --cyan-accent: #06B6D4;
+  --steel-blue: #6b8bb8;
+  --glow-color: rgba(159, 232, 255, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3A4A5C;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #415573;
+}
+
+/* Selection */
+::selection {
+  background-color: #0072CE;
+  color: white;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Gradient text utility */
+  .text-gradient {
+    background: linear-gradient(135deg, #5a7aa0, #7b9bd1, #6b8bb8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-light {
+    background: linear-gradient(135deg, #6b8bb8, #8aa5d4, #a3b5ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-cyan {
+    background: linear-gradient(135deg, #06B6D4, #3B82F6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Button styles for dark theme */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white rounded-lg;
+    background: linear-gradient(135deg, #0072CE, #3B82F6);
+    @apply hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-cyan-accent focus:ring-offset-2 focus:ring-offset-dark-bg;
+    @apply transition-all duration-200 ease-out;
+    box-shadow: 0 0 20px rgba(0, 114, 206, 0.3);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 0 30px rgba(0, 114, 206, 0.5);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-lg;
+    @apply text-steel-light bg-navy/50 border border-charcoal;
+    @apply hover:bg-navy hover:border-steel-dark hover:text-white;
+    @apply focus:outline-none focus:ring-2 focus:ring-steel focus:ring-offset-2 focus:ring-offset-dark-bg;
+    @apply transition-all duration-200 ease-out;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium;
+    @apply text-steel hover:text-white hover:bg-white/5 rounded-lg;
+    @apply transition-all duration-200 ease-out;
+  }
+
+  /* Glass card effect */
+  .glass-card {
+    background: rgba(39, 49, 66, 0.5);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(107, 139, 184, 0.2);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Glow card */
+  .glow-card {
+    position: relative;
+    background: linear-gradient(135deg, rgba(39, 49, 66, 0.8), rgba(13, 17, 23, 0.9));
+    border: 1px solid rgba(107, 139, 184, 0.2);
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  .glow-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.5), transparent);
+  }
+}
+
+/* Waveform animation bars */
+.waveform-bar {
+  animation: waveform 1s ease-in-out infinite;
+}
+
+.waveform-bar:nth-child(1) { animation-delay: 0s; }
+.waveform-bar:nth-child(2) { animation-delay: 0.08s; }
+.waveform-bar:nth-child(3) { animation-delay: 0.16s; }
+.waveform-bar:nth-child(4) { animation-delay: 0.24s; }
+.waveform-bar:nth-child(5) { animation-delay: 0.32s; }
+.waveform-bar:nth-child(6) { animation-delay: 0.40s; }
+.waveform-bar:nth-child(7) { animation-delay: 0.48s; }
+.waveform-bar:nth-child(8) { animation-delay: 0.56s; }
+
+@keyframes waveform {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+
+/* Ambient glow effect */
+.ambient-glow {
+  position: fixed;
+  pointer-events: none;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.08), transparent 70%);
+  filter: blur(40px);
+}
+
+/* Section backgrounds */
+.section-dark {
+  background: #0A0A0F;
+}
+
+.section-navy {
+  background: linear-gradient(180deg, #0d1117 0%, #273142 100%);
+}
+
+.section-gradient {
+  background: linear-gradient(180deg, #0A0A0F 0%, #0d1117 50%, #0A0A0F 100%);
+}
+
+/* Vapi widget styling */
+vapi-widget {
+  --vapi-primary-color: #0072CE !important;
+  --vapi-accent-color: #06B6D4 !important;
+}
+
+vapi-widget::part(button),
+vapi-widget [class*="button"],
+vapi-widget button {
+  background: linear-gradient(135deg, #0072CE, #06B6D4) !important;
+}
+
+vapi-widget::part(send-button),
+vapi-widget [class*="send"] {
+  background: linear-gradient(135deg, #0072CE, #06B6D4) !important;
+}
+
+/* Override any green/teal colors in the widget */
+vapi-widget * {
+  --tw-ring-color: #06B6D4 !important;
+}
+
+vapi-widget [style*="background-color: rgb(16, 185, 129)"],
+vapi-widget [style*="background-color: #10b981"],
+vapi-widget [style*="background: rgb(16, 185, 129)"] {
+  background: linear-gradient(135deg, #0072CE, #06B6D4) !important;
+}
+
+/* End Chat button - change from red to steel gray */
+vapi-widget [class*="end"],
+vapi-widget button[class*="End"],
+vapi-widget [style*="color: rgb(239, 68, 68)"],
+vapi-widget [style*="color: #ef4444"] {
+  color: #6b8bb8 !important;
+}
+
+vapi-widget button:has(span:contains("End")) {
+  color: #6b8bb8 !important;
+}
+
+/* Override all red text in widget */
+vapi-widget *[style*="red"],
+vapi-widget *[style*="ef4444"],
+vapi-widget *[style*="239, 68, 68"] {
+  color: #6b8bb8 !important;
+}

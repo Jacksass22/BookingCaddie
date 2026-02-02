@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(unzip:*)",
+      "Bash(gh auth:*)",
+      "Bash(netlify:*)",
+      "Bash(git init:*)"
+    ]
+  }
+}
