@@ -231,3 +231,18 @@ vapi-widget *[style*="ef4444"],
 vapi-widget *[style*="239, 68, 68"] {
   color: #6b8bb8 !important;
 }
+
+/* Embedded inline chat widget styles */
+vapi-widget[position="inline"] {
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+  display: block !important;
+}
+
+vapi-widget[position="inline"]::part(container) {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 0 !important;
+  position: relative !important;
+}
