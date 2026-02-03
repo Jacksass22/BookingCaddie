@@ -115,47 +115,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-16 lg:py-24 section-navy">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Our Team</h2>
-            <p className="text-steel max-w-2xl mx-auto">
-              A small team of engineers, designers, and golf enthusiasts based
-              in Austin, Texas. We&apos;re backed by investors who believe in
-              the future of AI-powered hospitality.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {[
-              {
-                name: "Alex Rivera",
-                role: "CEO & Co-founder",
-                bio: "Former head of product at a golf tech company. 15 handicap.",
-              },
-              {
-                name: "Jordan Chen",
-                role: "CTO & Co-founder",
-                bio: "AI/ML engineer with a background in voice recognition. Scratch golfer.",
-              },
-              {
-                name: "Sam Thompson",
-                role: "Head of Customer Success",
-                bio: "10 years in golf course management. Knows the business inside and out.",
-              },
-            ].map((person, i) => (
-              <div key={i} className="text-center">
-                <div className="w-24 h-24 bg-white/10 rounded-full mx-auto mb-4 border border-white/10" />
-                <h3 className="font-semibold text-white">{person.name}</h3>
-                <p className="text-cyan-accent text-sm mb-2">{person.role}</p>
-                <p className="text-steel text-sm">{person.bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-16 lg:py-24 section-dark border-t border-white/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
