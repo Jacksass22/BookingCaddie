@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, ChevronDown, Phone, MessageSquare, Settings, Users } from "lucide-react";
-import { VapiChat } from "@/components/VapiChat";
+import { ArrowRight, ChevronDown, Phone, MessageSquare, Settings, Users, MessageCircle } from "lucide-react";
 
 const faqCategories = [
   {
@@ -186,7 +185,23 @@ export default function FAQPage() {
       <section className="py-8 lg:py-12 section-dark">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {activeCategory === "askAI" ? (
-            <VapiChat />
+            <div className="max-w-2xl mx-auto text-center py-16">
+              <div className="w-20 h-20 bg-gradient-to-br from-cyan-accent/20 to-defiant-blue/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <MessageCircle className="w-10 h-10 text-cyan-accent" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Chat with BookingCaddie AI
+              </h3>
+              <p className="text-steel mb-8 leading-relaxed">
+                Have a question that&apos;s not covered here? Our AI assistant can help.
+                Click the <span className="text-cyan-accent font-medium">BookingCaddie AI</span> button
+                in the bottom right corner to start a conversation.
+              </p>
+              <div className="flex items-center justify-center gap-2 text-sm text-steel/70">
+                <span className="w-2 h-2 bg-cyan-accent rounded-full animate-pulse" />
+                Available 24/7
+              </div>
+            </div>
           ) : (
             /* FAQ Accordion */
             <div className="space-y-4">
