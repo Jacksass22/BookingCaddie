@@ -16,6 +16,11 @@ export const metadata: Metadata = {
     "AI phone answering",
     "golf course software",
   ],
+  icons: {
+    icon: "/images/Favicon.png",
+    shortcut: "/images/Favicon.png",
+    apple: "/images/Favicon.png",
+  },
   openGraph: {
     title: "BookingCaddie | AI Voice Reception for Golf Courses",
     description: "Never miss a call. Never miss a booking.",
