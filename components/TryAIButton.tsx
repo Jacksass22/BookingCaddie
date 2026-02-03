@@ -8,7 +8,7 @@ export function TryAIButton() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="fixed top-20 right-4 z-40 sm:top-24 sm:right-6">
+    <div className="fixed bottom-24 right-4 z-40 sm:bottom-auto sm:top-24 sm:right-6">
       <AnimatePresence mode="wait">
         {!isExpanded ? (
           <motion.button
@@ -27,11 +27,11 @@ export function TryAIButton() {
         ) : (
           <motion.div
             key="expanded"
-            initial={{ opacity: 0, x: 20, scale: 0.9 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            exit={{ opacity: 0, x: 20, scale: 0.9 }}
+            initial={{ opacity: 0, y: 10, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 10, scale: 0.9 }}
             transition={{ type: "spring", damping: 20, stiffness: 300 }}
-            className="bg-gradient-to-r from-navy/95 to-dark-bg/95 backdrop-blur-md border border-cyan-accent/30 rounded-2xl p-4 shadow-xl shadow-cyan-accent/10 max-w-[280px] sm:max-w-none"
+            className="bg-gradient-to-r from-navy/95 to-dark-bg/95 backdrop-blur-md border border-cyan-accent/30 rounded-2xl p-4 shadow-xl shadow-cyan-accent/10 max-w-[260px] sm:max-w-none"
           >
             <div className="flex items-start justify-between gap-3 mb-3">
               <div className="flex items-center gap-2">
@@ -56,7 +56,7 @@ export function TryAIButton() {
             </a>
 
             <p className="text-xs text-steel">
-              Call now to experience our AI assistant firsthand
+              Call now to experience our AI assistant
             </p>
           </motion.div>
         )}
