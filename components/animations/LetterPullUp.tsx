@@ -31,7 +31,7 @@ const LetterPullUp = ({ text, className = "", delay = 0 }: LetterPullUpProps) =>
   return (
     <div ref={ref} className={`flex flex-wrap justify-center ${className}`}>
       {words.map((word, i) => (
-        <span key={i} className="overflow-hidden mr-[0.25em]">
+        <span key={i} className="overflow-hidden mr-[0.25em] pb-[0.15em]">
           <motion.span
             variants={pullupVariant}
             initial="initial"

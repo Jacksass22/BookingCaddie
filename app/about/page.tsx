@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Phone, Clock, Users, Moon, Repeat, Coffee } from "lucide-react";
+import { ArrowRight, Phone, Clock, Users, Moon, Repeat, Coffee, Rocket } from "lucide-react";
 import BlurText from "@/components/animations/BlurText";
 import SplitText from "@/components/animations/SplitText";
 import LetterPullUp from "@/components/animations/LetterPullUp";
@@ -317,6 +317,55 @@ export default function AboutPage() {
               </MagneticCard>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Beyond Voice - Additional Services */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-navy/20 to-transparent" />
+
+        <div className="relative max-w-4xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
+              <Rocket className="w-4 h-4 text-cyan-accent" />
+              <span className="text-sm text-steel">When you&apos;re ready for more</span>
+            </div>
+
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Beyond Voice: Full-Service Golf Tech
+            </h2>
+
+            <p className="text-lg text-steel max-w-2xl mx-auto mb-8">
+              Love what BookingCaddie does for your phones? We can help with the bigger picture too —
+              custom app development, modern websites, complete booking system overhauls, and
+              marketing automation that actually works.
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-3 text-sm">
+              {["Custom Apps", "Website Design", "Booking Systems", "Marketing Automation"].map((service, i) => (
+                <motion.span
+                  key={i}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 * i, duration: 0.3 }}
+                  className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-steel hover:border-cyan-accent/30 hover:text-white transition-all duration-300"
+                >
+                  {service}
+                </motion.span>
+              ))}
+            </div>
+
+            <p className="text-steel/60 text-sm mt-8">
+              Not sure what you need? <Link href="/contact" className="text-cyan-accent hover:underline">Just ask</Link> — we&apos;ll point you in the right direction.
+            </p>
+          </motion.div>
         </div>
       </section>
 
