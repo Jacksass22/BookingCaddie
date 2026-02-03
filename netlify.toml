@@ -1,3 +1,7 @@
 [build]
   command = "npm run build"
   publish = "out"
+
+# Disable Next.js runtime for static export
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
