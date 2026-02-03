@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Clock, TrendingUp, PhoneOff, Phone } from "lucide-react";
+import { ArrowRight, Clock, TrendingUp, PhoneOff } from "lucide-react";
 import { ProductSelector } from "@/components/ProductSelector";
 
 export default function Home() {
@@ -54,27 +54,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Try AI CTA */}
-            <div className="mt-8 lg:mt-12 mb-16 lg:mb-0">
-              <a
-                href="tel:+18438688065"
-                className="inline-flex items-center gap-3 px-4 py-2.5 sm:px-6 sm:py-4 bg-gradient-to-r from-defiant-blue/20 via-electric-blue/10 to-cyan-accent/20 border border-cyan-accent/30 rounded-xl sm:rounded-2xl hover:border-cyan-accent/50 transition-all group"
-              >
-                <div className="w-9 h-9 sm:w-12 sm:h-12 bg-gradient-to-br from-defiant-blue to-cyan-accent rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
-                </div>
-                <div className="text-left">
-                  <p className="text-xs sm:text-sm text-cyan-accent font-medium">Try it right now</p>
-                  <p className="text-base sm:text-xl lg:text-2xl font-bold text-white group-hover:text-cyan-accent transition-colors">
-                    +1 (843) 868-8065
-                  </p>
-                </div>
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-accent ml-1 sm:ml-2 group-hover:translate-x-1 transition-transform" />
-              </a>
-              <p className="text-steel text-xs sm:text-sm mt-2 sm:mt-3">
-                Call our AI assistant to experience it firsthand
-              </p>
-            </div>
           </div>
         </div>
       </section>
