@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Phone, Mail, MapPin, Check, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, Check, ArrowRight, Calendar } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -59,12 +59,28 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-semibold text-white mb-1">Call Us</h3>
                   <a
-                    href="tel:+18005551234"
+                    href="tel:+18438688065"
                     className="text-cyan-accent hover:text-cyan-300 transition-colors"
                   >
-                    (800) 555-1234
+                    (843) 868-8065
                   </a>
-                  <p className="text-steel text-sm mt-1">Mon-Fri 9am-6pm CT</p>
+                  <p className="text-steel text-sm mt-1">Mon-Fri 9am-6pm ET</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-cyan-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Calendar className="w-6 h-6 text-cyan-accent" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-white mb-1">Schedule a Call</h3>
+                  <a
+                    href="/demo"
+                    className="text-cyan-accent hover:text-cyan-300 transition-colors"
+                  >
+                    Book a time that works for you
+                  </a>
+                  <p className="text-steel text-sm mt-1">30-minute demo call</p>
                 </div>
               </div>
 
